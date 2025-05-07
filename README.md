@@ -87,16 +87,20 @@ Examples:
 
 ## 📂 Project Structure
 
-```
 📆 promptshell/
-├── main.py
-├── prompt.docx
+├── src/ # Core Python source code
+│ ├── main.py # Entry point
+│ ├── audio_utils.py # Mic/system audio capture logic
+│ ├── whisper_utils.py # Whisper-based transcription
+│ ├── llm_utils.py # Gemini 1.5 API integration
+│ ├── ui.py # Tkinter GUI
+│ └── prompt.docx # Replaceable prompt file
+├── assets/ # Screenshots, examples, recordings
+│ ├── example.png
+│ └── conversation.gif
 ├── requirements.txt
-├── audio_utils.py
-├── whisper_utils.py
-├── llm_utils.py
-├── ui.py
-```
+├── README.md
+└── LICENSE
 
 ---
 
@@ -115,44 +119,6 @@ You can use:
 - [OpenRouter](https://openrouter.ai) API with Gemini access
 
 ---
-
-## 💪 Core Code Components
-
-### `main.py`
-
-```python
-import tkinter as tk
-from tkinter import scrolledtext
-import keyboard
-import sounddevice as sd
-import numpy as np
-import tempfile
-import scipy.io.wavfile as wav
-import whisper
-import requests
-from docx import Document
-import threading
-import warnings
-
-warnings.filterwarnings("ignore", category=UserWarning)
-
-DEVICE_INDEX = 3
-SAMPLE_RATE = 48000
-API_KEY = "your-api-key"
-GEMINI_MODEL = "google/gemini-flash-1.5"
-model = whisper.load_model("base")
-
-def load_prompt(path="prompt.docx"):
-    try:
-        doc = Document(path)
-        return "\n".join([p.text for p in doc.paragraphs if p.text.strip()])
-    except:
-        return "You are a helpful assistant."
-
-system_prompt = load_prompt()
-
-# Add additional functions for recording, transcription, and Gemini calls below
-```
 
 ---
 
