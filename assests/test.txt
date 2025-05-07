@@ -1,0 +1,13 @@
+🔊 Short Sample Inputs for PromptShell – Executive Summary Assistant
+🗣 Input 1 – Bug Update
+“Fixed the payment API bug — currency issue. Starting front-end validation, done by Thursday. Deployment paused until QA approves.”
+
+🗣 Input 2 – Cost Talk
+“Infrastructure is 15% over budget. Let’s try reserved instances. Dan, check spot scaling options by next week.”
+
+🗣 Input 3 – Quick Decision
+“Let’s move from Firebase Auth to Auth0. I’ll update the plan and notify the team today.”
+
+🗣 Input 4 – Messy Reminder
+“Was it Friday or Monday? Whatever — Priya, send the summary to the client. I’ll update the tracker.”
+
