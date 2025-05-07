@@ -1,0 +1,8 @@
+tk
+keyboard
+sounddevice
+numpy
+scipy
+openai-whisper
+requests
+python-docx
